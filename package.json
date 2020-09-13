@@ -1,0 +1,40 @@
+{
+  "name": "VanillaPHP_VueJS_MySQL_Example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "front-end/app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "build": [
+      "./front-end/app/*.js",
+      "./front-end/app/layouts/*.js",
+      "./front-end/app/components/*.js",
+      "./front-end/assets/js/*.js"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "keywords": [],
+  "author": "Andrei Jakupson",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "npm-watch": "^0.6.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@babel/core": "^7.10.3",
+    "axios": "^0.20.0"
+  }
+}

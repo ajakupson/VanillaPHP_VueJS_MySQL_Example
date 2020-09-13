@@ -1,0 +1,58 @@
+.jumbotron {
+  background-color: #FF9B00;
+}
+.container h1 {
+  color: #FF9B00;
+}
+ol, ul {
+  margin: 10px;
+}
+ul {
+  list-style: none;
+}
+ul li::before {
+  content: "\2022";
+  color: black;
+  font-weight: bold;
+  font-size: 1.3em;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+ol li, ul li {
+  padding: 5px;
+}
+label {
+  margin-top: 0.5rem;
+}
+h3 {
+  margin: 20px;
+}
+.btn {
+  margin: 15px;
+}
+table th {
+  min-width: 180px;
+  font-weight: normal;
+}
+th.bold {
+  font-weight: bold;
+}
+table td {
+  min-width: 130px;
+  text-align: right;
+}
+.text-left: {
+  text-align: left;
+}
+.text-right: {
+  text-align: right;
+}
+.free-space {
+  height: 50px;
+  display: block;
+}
+.calculation-table-container {
+  margin: 30px;
+  margin-left: 0;
+}
