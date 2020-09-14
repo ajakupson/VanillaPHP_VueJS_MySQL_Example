@@ -1,3 +1,5 @@
+# VanillaPHP + VueJS + MySQL Example
+
 ```
 project root/
 ├── index.php
