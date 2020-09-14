@@ -1,7 +1,7 @@
 # VanillaPHP_VueJS_MySQL_Example
 
-project_root/  
-├── index.php  
+project_root/<br/>  
+├── index.php<br/>  
 ├── back-end/ -- everything related to server side  
 │   ├── api/ -- ajax calls  
 |   |   └── task-2-insurance-calculator.php  
