@@ -18,7 +18,7 @@ project root/
 │       ├── Utils.php
 │       └── xConstants.php
 ├── front-end/ -- everything related to client side
-│    app/
+│        app/
 │        ├── app.js -- VueJS app
 │        ├── build/
 │        │    └── main.bundle.js -- compiled JavaScript used in index.php
@@ -38,4 +38,3 @@ project root/
              └── ...
 
 ```
-  
