@@ -56,3 +56,15 @@ table td {
   margin: 30px;
   margin-left: 0;
 }
+.db-image {
+  margin: 0 auto 20px auto;
+  border: 1px solid lightgray;
+}
+.footer {
+  background-color: #FF9B00;
+  margin-top: 20px !important;
+  height: 70px !important;
+}
+.footer h3 {
+  margin: 0 0 0 10px;
+}

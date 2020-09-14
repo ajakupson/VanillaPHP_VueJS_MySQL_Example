@@ -24,19 +24,21 @@ export default {
               <div class="row">
                 <button class="btn btn-primary btn-lg" @click="calculate">Calculate</button>
               </div>
-              <calculation-result :calculationResult="calculationResult" :taxPercentage="taxPercentage"></calculation-result>
+              <calculation-result :calculationResult="calculationResult" :taxPercentage="taxPercentage" :basePricePrcntg="basePricePrcntg"></calculation-result>
              </task-layout>`,
   components: {
     'task-layout': TaskLayout,
     'calculation-result': CalculationResult
   },
   methods: {
-    isNumberOrDot: function(evt) {},
     calculate: function() {
+      this.checkAndSetBasePricePrcntg();
+
       var formData = {
+        basePricePrcntg: this.basePricePrcntg,
         estimatedCarPrice: this.estimatedValue,
         taxPercentage: this.taxPercentage,
-        numOfInstalments: this.numOfInstalments
+        numOfInstalments: this.numOfInstalments,
       };
 
       var that = this;
@@ -46,8 +48,32 @@ export default {
              that.calculationResult = response.data;
            })
            .catch(function (error) {
-            console.log(error.message);
+             console.log(error.message);
           });
+    },
+    checkAndSetBasePricePrcntg: function() {
+      var now = new Date();
+      console.log("how", now.toString());
+      var year = now.getFullYear();
+      var month = now.getMonth();
+      var dayOfTheWeek = now.getDay(); // Friday = 5
+      var dayOfTheMonth = now.getDate();
+
+      /*
+      var now = new Date(year, month, 18, 15, 0, 0, 0); // test, 3rd parameter is day of month
+      var dayOfTheWeek = now.getDay(); // test
+      var minDate = new Date(year, month, 18, 15, 0, 0, 0); // test
+      var maxDate = new Date(year, month, 18, 20, 0, 0, 0); // test
+      */
+
+      var minDate = new Date(year, month, dayOfTheMonth, 15, 0, 0, 0);
+      var maxDate = new Date(year, month, dayOfTheMonth, 20, 0, 0, 0);
+
+      this.basePriceOfPolicy = 0.11;
+      if(dayOfTheWeek == 5 && now >= minDate && now <= maxDate ){
+        this.basePricePrcntg = 0.13;
+      }
+      console.log("this.basePricePrcntg", this.basePricePrcntg);
     }
   },
   watch: {
@@ -76,6 +102,7 @@ export default {
       estimatedValue: "100",
       taxPercentage: "0",
       numOfInstalments: 1,
+      basePricePrcntg: 0.11,
       calculationResult: { carPrice: "", grandTotals: "", instalments: [],  totalBasePrice: "", totalCommision: "", totalTax: "" },
       REG_EX_BETWEEN_100_100000_TWO_DECIMALS: /^100000$|^[1-9]([0-9]{1,4})?(\.\d{0,2})?$/,
       REG_EX_BETWEEN_0_100_TWO_DECIMALS: /^100$|^\d{0,2}(\.\d{0,2})?$/,

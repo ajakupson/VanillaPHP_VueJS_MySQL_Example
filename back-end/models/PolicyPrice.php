@@ -5,13 +5,15 @@ require_once('./../utils/xConstants.php');
 
 class PolicyPrice {
 
-  public function __construct($carPrice = 100, $taxPrcntg = 0, $numOfInstalments = 1) {
+  public function __construct($carPrice = 100, $basePricePrcntg = 0.11, $taxPrcntg = 0, $numOfInstalments = 1) {
     $this->carPrice = $carPrice;
+    $this->basePricePrcntg = $basePricePrcntg;
     $this->instalments = array();
     $this->CalculatePolicyPrice($taxPrcntg, $numOfInstalments);
   }
 
   private $carPrice;
+  private $basePricePrcntg;
   private $totalBasePrice;
   private $totalCommision;
   private $totalTax;
@@ -19,10 +21,7 @@ class PolicyPrice {
   private $instalments;
 
   private function CalculatePolicyPrice($taxPrcntg = 0, $numOfInstalments = 1) {
-    // TODO: check day and time
-    $policyBasePricePercntg = POLICY_BASE_PRICE_NOT_FRIDAY_15_20;
-
-    $this->totalBasePrice = $this->carPrice * $policyBasePricePercntg;
+    $this->totalBasePrice = $this->carPrice * $this->basePricePrcntg;
     $this->totalCommision = $this->totalBasePrice * COMMISION;
     $this->totalTax = $taxPrcntg / 100 * $this->totalBasePrice;
     $this->grandTotals = $this->totalBasePrice + $this->totalCommision + $this->totalTax;

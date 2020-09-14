@@ -16,7 +16,7 @@ export default {
                     <td v-for="(instalment, instalmentIndx) in calculationResult.instalments"></td>
                   </tr>
                   <tr>
-                    <th>Base premium (11%)</th><td>{{ calculationResult.totalBasePrice }}</td>
+                    <th v-bind:basePricePrcntg="basePricePrcntg">Base premium ({{ basePricePrcntg * 100 }}%)</th><td>{{ calculationResult.totalBasePrice }}</td>
                     <td v-for="(instalment, instalmentIndx) in calculationResult.instalments">
                       {{ instalment.basePremium }}
                     </td>
@@ -41,8 +41,8 @@ export default {
                   </tr>
                 </tbody>
               </table>
-             </div>
-            <div class="free-space"></div>`,
+              <div class="free-space"></div>
+             </div>`,
   props: {
     calculationResult: {
       type: Object,
@@ -50,6 +50,10 @@ export default {
     },
     taxPercentage: {
       type: String,
+      required: true
+    },
+    basePricePrcntg: {
+      type: Number,
       required: true
     }
   },
