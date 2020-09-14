@@ -17,24 +17,24 @@ project_root/
 │   └── utils/
 │       ├── Utils.php
 │       └── xConstants.php
-├── front-end/ -- everything related to client side
-│        app/
-│        ├── app.js -- VueJS app
-│        ├── build/
-│        │    └── main.bundle.js -- compiled JavaScript used in index.php
-│        ├── components/
-│        │    ├── Task_1.js
-│        │    ├── Task_2.js
-│        │    ├── CalculationResult.js
-│        │    └── Task_3.js
-│        └── layouts/
-│            └── TaskLayout.js
-└─────── assets/ -- third party libs, custom styles, images and JS utils
-         ├── css/
-         │   └── ...
-         ├── imgs/
-         │   └── ...
-         └── js/
-             └── ...
+└── front-end/ -- everything related to client side
+    ├──app/
+    |  ├── app.js -- VueJS app
+    |  ├── build/
+    |  │   └── main.bundle.js -- compiled JavaScript used in index.php
+    |  ├── components/
+    |  │   ├── Task_1.js
+    |  │   ├── Task_2.js
+    |  │   ├── CalculationResult.js
+    |  │   └── Task_3.js
+    |  └── layouts/
+    |      └── TaskLayout.js
+    └── assets/ -- third party libs, custom styles, images and JS utils
+        ├── css/
+        │   └── ...
+        ├── imgs/
+        │   └── ...
+        └── js/
+            └── ...
 
 ```
