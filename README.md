@@ -1,4 +1,4 @@
-# VanillaPHP + VueJS + MySQL Example
+# Vanilla PHP + VueJS + MySQL Example
 
 ```
 project root/
