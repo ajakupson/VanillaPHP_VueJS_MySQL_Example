@@ -1,7 +1,7 @@
 # Vanilla PHP + VueJS + MySQL Example
 
 ```
-project root/
+project_root/
 ├── index.php
 ├── back-end/ -- everything related to server side
 │   ├── api/ -- ajax calls
@@ -23,10 +23,10 @@ project root/
 │        ├── build/
 │        │    └── main.bundle.js -- compiled JavaScript used in index.php
 │        ├── components/
-│        │    ├── Task 1.js
-│        │    ├── Task 2.js
+│        │    ├── Task_1.js
+│        │    ├── Task_2.js
 │        │    ├── CalculationResult.js
-│        │    └── Task 3.js
+│        │    └── Task_3.js
 │        └── layouts/
 │            └── TaskLayout.js
 └─────── assets/ -- third party libs, custom styles, images and JS utils
