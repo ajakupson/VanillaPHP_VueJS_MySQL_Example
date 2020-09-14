@@ -1,36 +1,36 @@
 # VanillaPHP_VueJS_MySQL_Example           
 
 project_root/\
-├── index.php\
-├── back-end/ -- everything related to server side\
-│   ├── api/ -- ajax calls\
-│   │   └── task-2-insurance-calculator.php\
-│   ├── database/\
-│   │   ├── dev.sql -- queries used during development\
-│   │   └── ajakupson_database_exoprt.sql -- export from phpMyAdmin\
-│   ├── models/ -- classes and DTOs\
-│   │   ├── Employee.php\
-│   │   ├── PolicyPrice.php\
-│   │   └── Instalements.php\
-│   └── utils/\
-│       ├── Utils.php\
-│       └── xConstants.php\
-├── front-end/ -- everything related to client side\
-│    app/\
-│        ├── app.js -- VueJS app\
-│        ├── build/\
-│        │    └── main.bundle.js -- compiled JavaScript used in index.php\
-│        ├── components/\
-│        │    ├── Task_1.js\
-│        │    ├── Task_2.js\
-│        │    ├── CalculationResult.js\
-│        │    └── Task_3.js\
-│        └── layouts/\
-│            └── TaskLayout.js\
-└─────── assets/ -- third party libs, custom styles, images and JS utils\
-        ├── css\
-        │    └── ...\
-        ├── imgs
-        │    └── ...\
-        └── js\
-            └── ...\ 
+├──_index.php\
+├──_back-end/_--_everything_related_to_server_side\
+│___├──_api/_--_ajax_calls\
+│___│___└──_task-2-insurance-calculator.php\
+│___├──_database/\
+│___│___├──_dev.sql_--_queries_used_during_development\
+│___│___└──_ajakupson_database_exoprt.sql_--_export_from_phpMyAdmin\
+│___├──_models/_--_classes_and_DTOs\
+│___│___├──_Employee.php\
+│___│___├──_PolicyPrice.php\
+│___│___└──_Instalements.php\
+│___└──_utils/\
+│_______├──_Utils.php\
+│_______└──_xConstants.php\
+├──_front-end/_--_everything_related_to_client_side\
+│____app/\
+│________├──_app.js_--_VueJS_app\
+│________├──_build/\
+│________│____└──_main.bundle.js_--_compiled_JavaScript_used_in_index.php\
+│________├──_components/\
+│________│____├──_Task_1.js\
+│________│____├──_Task_2.js\
+│________│____├──_CalculationResult.js\
+│________│____└──_Task_3.js\
+│________└──_layouts/\
+│____________└──_TaskLayout.js\
+└───────_assets/_--_third_party_libs,_custom_styles,_images_and_JS_utils\
+_________├──_css\
+_________│___└──_...\
+_________├──_imgs
+_________│___└──_...\
+_________└──_js\
+_____________└──_...\_
