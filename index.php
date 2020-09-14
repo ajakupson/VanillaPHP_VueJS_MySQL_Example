@@ -34,7 +34,7 @@
           require_once('./back-end/database/MySQL_Database.php');
           require_once('./back-end/utils/Utils.php');
 
-          $mySqlDb = new MySQL_Database("localhost1", "root", "TiAsGa90", "ajakupson_database");
+          $mySqlDb = new MySQL_Database("localhost", "root", "TiAsGa90", "ajakupson_database");
           $isDbConnected = $mySqlDb->getConnectionStatus();
 
           if(!$isDbConnected) {
