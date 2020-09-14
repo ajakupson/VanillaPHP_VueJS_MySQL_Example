@@ -1,7 +1,7 @@
 # Vanilla PHP + VueJS + MySQL Example
 
 ```
-project root/
+project_root/
 ├── index.php
 ├── back-end/ -- everything related to server side
 │   ├── api/ -- ajax calls
