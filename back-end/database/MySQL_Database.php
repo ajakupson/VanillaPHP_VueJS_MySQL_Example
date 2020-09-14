@@ -23,8 +23,8 @@ class MySQL_Database
       return $this->con;
     }
 
-    public function getEmployeeDataInAllLanguages() {
-      $query = "SELECT * FROM employees e INNER JOIN employees_description ed ON e.id = ed.employee_id ORDER BY e.id ASC LIMIT 3";
+    public function getFirstEmployeeDataInAllLanguages() {
+      $query = "SELECT * FROM employees e INNER JOIN employees_description ed ON e.id = ed.employee_id WHERE e.id = (SELECT MIN(id) FROM employees)";
       $this->result = mysqli_query($this->con, $query);
       $rows = mysqli_num_rows($this->result);
       $data = array();

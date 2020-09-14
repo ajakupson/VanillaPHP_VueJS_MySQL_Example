@@ -42,7 +42,7 @@
                     <p>No connection with the DataBase!</p>
                     <p>
                       Can\'t execute the following query
-                      <div class="alert alert-dark">SELECT * FROM employees e INNER JOIN employees_description ed ON e.id = ed.employee_id ORDER BY e.id ASC LIMIT 3</div>
+                      <div class="alert alert-dark">SELECT * FROM employees e INNER JOIN employees_description ed ON e.id = ed.employee_id WHERE e.id = (SELECT MIN(id) FROM employees)</div>
                       to get 1-person data in all languages
                     </p>
                   </div>';
@@ -51,11 +51,11 @@
                     <p>Connection with DataBase established!</p>
                     <p>
                       Executing the following query
-                      <div class="alert alert-dark">SELECT * FROM employees e INNER JOIN employees_description ed ON e.id = ed.employee_id ORDER BY e.id ASC LIMIT 3</div>
+                      <div class="alert alert-dark">SELECT * FROM employees e INNER JOIN employees_description ed ON e.id = ed.employee_id WHERE e.id = (SELECT MIN(id) FROM employees)</div>
                       to get 1-person data in all languages
                     </p>
                   </div>';
-                  $employeeRecords = $mySqlDb->getEmployeeDataInAllLanguages();
+                  $employeeRecords = $mySqlDb->getFirstEmployeeDataInAllLanguages();
 
                   echo '<div class="alert alert-dark">
                           <p><strong>Data in JSON format:</strong></p>';
