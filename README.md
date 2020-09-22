@@ -8,7 +8,7 @@ project_root/
 │   │   └── task-2-insurance-calculator.php
 │   ├── database/
 │   │   ├── dev.sql -- queries used during development
-|   |   ├── ajakupson database exoprt.sql -- export from phpMyAdmin
+|   |   ├── ajakupson_database_exoprt.sql -- export from phpMyAdmin
 │   │   └── MySQL_Database.php
 │   ├── models/ -- classes and DTOs
 │   │   ├── Employee.php
